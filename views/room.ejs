@@ -19,6 +19,7 @@ It's easy to integrate with Express.js. -->
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
@@ -45,11 +46,17 @@ It's easy to integrate with Express.js. -->
 
         <div class="main__controls">
           <div class="main__controls__block">
-            <div class="main__controls__button">
+            <div
+              onclick="muteUnmute()"
+              class="main__controls__button main__mute_button"
+            >
               <i class="fa-solid fa-microphone"></i>
               <span>Mute</span>
             </div>
-            <div class="main__controls__button">
+            <div
+              onclick="playStop()"
+              class="main__controls__button main__video_button"
+            >
               <i class="fa-solid fa-video"></i>
               <span>Stop Video</span>
             </div>
