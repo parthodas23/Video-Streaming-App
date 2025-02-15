@@ -121,3 +121,27 @@ const setPlayVideo = () => {
              <span>Play Video</span>`;
   document.querySelector(".main__video_button").innerHTML = html;
 };
+
+const leaveMeeting = () => {
+  if (confirm("Are you sure you want to leave the meeting?")) {
+    // Close peer connection
+    peer.destroy();
+    
+    // Notify other users
+    socket.emit('user-disconnected', peer.id);
+    
+    // Stop all media streams
+    if (myVideoStream) {
+      myVideoStream.getTracks().forEach(track => track.stop());
+    }
+    
+    // Redirect to homepage or close window
+    window.location.href = "/";
+    
+    // Optional: Clean up video grid
+    const videoGrid = document.getElementById('video-grid');
+    while (videoGrid.firstChild) {
+      videoGrid.removeChild(videoGrid.firstChild);
+    }
+  }
+};
