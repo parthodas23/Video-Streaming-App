@@ -106,3 +106,17 @@ h5 {
 .stop {
   color: red;
 }
+.leave-meeting-btn {
+  background-color: #ea4335;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.2s;
+}
+
+.leave-meeting-btn:hover {
+  background-color: #d33828;
+}
