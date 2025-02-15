@@ -53,6 +53,10 @@ It's easy to integrate with Express.js. -->
               <i class="fa-solid fa-microphone"></i>
               <span>Mute</span>
             </div>
+          
+          </div>
+
+          <div class="main__controls__block">
             <div
               onclick="playStop()"
               class="main__controls__button main__video_button"
@@ -60,28 +64,14 @@ It's easy to integrate with Express.js. -->
               <i class="fa-solid fa-video"></i>
               <span>Stop Video</span>
             </div>
+           
           </div>
 
           <div class="main__controls__block">
-            <div class="main__controls__button">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>Security</span>
-            </div>
-            <div class="main__controls__button">
-              <i class="fa-solid fa-user-group"></i>
-              <span>Participants</span>
-            </div>
-            <div class="main__controls__button">
-              <i class="fa-solid fa-message"></i>
-              <span>Chat</span>
-            </div>
-          </div>
-
-          <div class="main__controls__block">
-            <div class="main__controls__button">
-              <i class="fa-solid fa-arrow-right icon"></i>
-              <span class="leave_meeting">Leave Meeting</span>
-            </div>
+            <button class="leave-meeting-btn" onclick="leaveMeeting()">
+              <span class="icon">🚪</span>
+              Leave Meeting
+            </button>
           </div>
         </div>
       </div>
